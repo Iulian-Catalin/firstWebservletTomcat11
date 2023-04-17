@@ -6,7 +6,7 @@ import java.util.List;
 
 public class FoodDB {
 
-    public void  insert(String foodName) {
+    public void insert(String foodName) {
 
         try {
             Class.forName("org.postgresql.Driver");
@@ -15,9 +15,9 @@ public class FoodDB {
         }
 
         // conectare la db cu incarcare driver
-        final String URLDB = "jdbc:postgresql://localhost:5432/grupajava";
-        final String USERNAMEDB ="postgres";
-        final String PWDDB ="postgres";
+        final String URLDB = "jdbc:postgresql://192.168.50.128:5432/postgres";
+        final String USERNAMEDB = "postgres";
+        final String PWDDB = "postgres";
         int val = 0; // 1
         try {
             Connection conn = DriverManager.getConnection(URLDB, USERNAMEDB, PWDDB);
@@ -41,9 +41,9 @@ public class FoodDB {
         }
 
         // conectare la db cu incarcare driver
-        final String URLDB = "jdbc:postgresql://localhost:5432/grupajava";
-        final String USERNAMEDB ="postgres";
-        final String PWDDB ="postgres";
+        final String URLDB = "jdbc:postgresql://192.168.50.128:5432/postgres";
+        final String USERNAMEDB = "postgres";
+        final String PWDDB = "postgres";
         List<String> l = new ArrayList<>();
         int val = 0; // 1
         try {
@@ -56,7 +56,7 @@ public class FoodDB {
 
 
             while (rs.next()) {
-             l.add(rs.getString("foodname"));
+                l.add(rs.getString("foodname"));
             }
 
 
